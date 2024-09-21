@@ -19,6 +19,7 @@ def move(n, source, auxiliary, target):
         return
     
     # Paso 1: mover n-1 discos de la torre de origen a la torre auxiliar
+    # (usando la torre destino como torre auxiliar)
     move(n - 1, source, target, auxiliary)
     
     # Paso 2: mover el disco n de la torre de origen a la torre destino
@@ -28,6 +29,7 @@ def move(n, source, auxiliary, target):
     print(f'LISTA 1: {A}, LISTA 2: {B}, LISTA 3: {C}')
     
     # Paso 3: mover los n-1 discos desde la torre auxiliar a la torre destino
+    # (usando la torre de origen como torre auxiliar)
     move(n - 1, auxiliary, source, target)
 
 # Llamada a la función para mover todos los discos desde A (origen) a C (destino)
